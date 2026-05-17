@@ -133,11 +133,8 @@ Pin on Ultrasonic Pin on
 |Component	  |  Sensor	  |  Arduino	|    Description    |
 |-------------|-----------|-------------|-------------------|
 |Ultrasonic Sensor	  |      VCC	|        5V	     |   Power supply to sensor|
-
 |UltrasonicSensor	  |      GND	  |      GND	|        Ground connection|
-
 |UltrasonicSensor	  |      TRIG	   | 9	      |  Trigger pin to send ultrasonic pulses|
-
 | Ultrasonic Sensor	   |     ECHO	|    10	    |    Echo pin to receive reflected pulse|
 
 |Pin on Ultrasonic  | Pin on Component  |  Description Sensor Arduino|
