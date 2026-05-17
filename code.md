@@ -281,8 +281,8 @@ void loop() {
 
 - Connection 2 Table
 
-Pin 13 Ardiuno to LED anode (Small pin)
-Pin ground to LED cathode (Long pin)
+Pin 13 Ardiuno to LED anode (Small pin) ,
+Pin ground to LED cathode (Long pin) ,
 Connect LED to Ardiuno pin 13 Long terminal of LED anode 
 
 ---
