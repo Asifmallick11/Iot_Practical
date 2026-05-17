@@ -57,6 +57,11 @@ delay(2000); // Wait for 1000 millisecond(s)
 }
 ```
 
+- Connection 
+
+LED Short Leg on GND 
+LED Long Leg on 12
+
 ---
 
 # Practical 7 - Blinking LED using Arduino Uno and BreadBoard
@@ -76,10 +81,12 @@ digital(13, HIGH); delay(2000); digital(12, HIGH); delay(3000); digital(13, LOW)
 
 - Connections 
 
-D2	LED 1 Anode (long leg)
-D3	LED 2 Anode (long leg)
-GND Resistor → LED 1 Cathode (short leg) 
-GND Resistor → LED 2 Cathode (short leg)
+|Arduino uno Pin |	Component Connection |
+|----------------|-----------------------|
+|D2 |   LED 1 Anode (long leg)  |
+|D3	|   LED 2 Anode (long leg)  |
+|GND Resistor | LED 1 Cathode (short leg) |
+|GND Resistor | LED 2 Cathode (short leg) |
 
 ---
 
@@ -123,30 +130,20 @@ delay(500); // Wait before next reading
 
 Pin on Ultrasonic Pin on
 
-Component	    Sensor	    Arduino	    Description
+|Component	  |  Sensor	  |  Arduino	|    Description    |
+|-------------|-----------|-------------|-------------------|
+|Ultrasonic Sensor	  |      VCC	|        5V	     |   Power supply to sensor|
 
-Ultrasonic
-Sensor	        VCC	        5V	        Power supply to sensor
+|UltrasonicSensor	  |      GND	  |      GND	|        Ground connection|
 
-Ultrasonic
-Sensor	        GND	        GND	        Ground connection
+|UltrasonicSensor	  |      TRIG	   | 9	      |  Trigger pin to send ultrasonic pulses|
 
-Ultrasonic
-Sensor	        TRIG	    9	        Trigger pin to send ultrasonic pulses
+| Ultrasonic Sensor	   |     ECHO	|    10	    |    Echo pin to receive reflected pulse|
 
-Ultrasonic
-Sensor	        ECHO	    10	        Echo pin to receive reflected pulse
-
-Pin on Ultrasonic Pin on
-
-Component Description Sensor	    Arduino
-LED control pin (through Positive (Anode,
-LED	13	current-limiting resistor, e.g.,
-long leg)
-220Ω)
-Negative
-LED	(Cathode, short	GND	Ground for LED
-leg)
+|Pin on Ultrasonic  | Pin on Component  |  Description Sensor Arduino|
+|-------------------|-------------------|-----------------------------|
+|LED                | (Anode , long leg)|13 pin led control pin (through positive current limiting resistor eg 220ohm)
+|LED                | Negative(Cathode,short leg)|GND pin gournd for LED|
 
 ---
 
@@ -217,6 +214,10 @@ enteredPassword += key;
 }
 ```
 
+- Connection 
+
+Connect from D2 to D9 to ardiuno from D to * key 
+
 ---
 
 # Practical 10 - Control an LED using Arduino Uno and HC-05 Bluetooth Module with a Mobile App
@@ -269,18 +270,19 @@ void loop() {
 
 - Connection 1 Table 
 
-HC-05 Pin	        Arduino Connection	        Notes HC-05 Pin
-VCC	                5V	                        Power supply from VCC Arduino
+|HC-05 Pin	        | Arduino Connection	        | Notes HC-05 Pin |
+|------------------|--------------------------------|-----------------|
+|VCC	           |     5V	                    |    Power supply from VCC Arduino|
 
-GND	                GND	                        Common ground	GND
+|GND	           |     GND	             |           Common ground	GND|
 
-TX	                Pin 10 (Arduino RX)	        SoftwareSerial RX (direct TX connection)
+|TX	          |      Pin 10 (Arduino RX)	|        SoftwareSerial RX (direct TX connection)|
 
-RX	                Pin 11 (Arduino TX)	        SoftwareSerial TX (direct connection , no resistor for RX hobby use)
+|RX	             |   Pin 11 (Arduino TX)	|        SoftwareSerial TX (direct connection , no resistor for RX hobby use)|
 
-HC-05 Pin	        Arduino Connection	        Notes HC-05 Pin
+|HC-05 Pin	   |     Arduino Connection	   |     Notes HC-05 Pin|
 
-VCC	                5V	                        Power supply from VCC Arduino
+|VCC	        |        5V	                |        Power supply from VCC Arduino|
 
 - Connection 2 Table
 
@@ -334,19 +336,22 @@ Serial.print("Count updated: ")
 
 1. IR Sensor to Arduino Connection
 
-IR Sensor Pin	        Arduino Connection
-VCC	                    5V
-GND	                    GND
-OUT	                    Digital Pin 2
+|   IR Sensor Pin	        | Arduino Connection |
+|---------------------------|---------------------|
+| VCC	                    | 5V                   |
+|GND   	                    |     GND             |
+| OUT	                    | Digital Pin 2         |
 
 The OUT pin sends HIGH/LOW signals when an object is detected.
 
 2. HC-05 Bluetooth Module to Arduino
-HC-05 Pin	            Arduino Connection
-VCC	                    5V
-GND	                    GND
-TXD	                    Pin 10 (Arduino RX via SoftwareSerial)
-RXD	                    Pin 11 (Arduino TX via SoftwareSerial, use voltage divider)
+
+|HC-05 Pin	     |       Arduino Connection|
+|----------------|-------------------------|
+|VCC	           |         5V|
+|GND	          |          GND|
+|TXD	      |              Pin 10 (Arduino RX via SoftwareSerial)|
+|RXD	         |           Pin 11 (Arduino TX via SoftwareSerial, use voltage divider)|
 
 Important Note (Very Important)
 1) The HC-05 RX pin works on 3.3V, but Arduino gives 5V output.
@@ -501,11 +506,12 @@ void loop() {
 
 - Connections
 
-TM1637 Pin	            Arduino
-VCC	                    5V
-GND	                    GND
-DIO	                    Pin 3
-CLK	                    Pin 4
+|TM1637 Pin	         |   Arduino|
+|------------------|--------------|
+|VCC	          |          5V|
+|GND	           |         GND|
+|DIO	           |         Pin 3|
+|CLK	            |        Pin 4|
 
 ---
 
@@ -592,20 +598,23 @@ void loop() {
 
 Thermistor Connection (Voltage Divider)
 
-Component	                    Connection
-Thermistor one leg	            5V
-Thermistor other leg	        A0 + one side of 10k resistor
-10k resistor other side	        GND
+|Component	         |           Connection |
+|--------------------|----------------------|
+|Thermistor one leg	 |           5V         |
+|Thermistor other leg|	        A0 + one side of 10k resistor |
+|10k resistor other side|	        GND         |
 
 👉 A0 reads voltage to calculate temperature.
 
 TM1637 Display Connection
 
-TM1637 Pin	            Arduino
-VCC	                    5V
-GND	                    GND
-DIO	                    Pin 3
-CLK	                    Pin 4
+|TM1637 Pin         |	    Arduino     |
+|-------------------|-------------------|
+|VCC                |       5V          |
+|GND                |       GND         |
+|DIO                |       Pin 3       |
+|CLK	            |       Pin 4       |
+
 
 Working Concept
 
