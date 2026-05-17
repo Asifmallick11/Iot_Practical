@@ -273,15 +273,10 @@ void loop() {
 |HC-05 Pin	        | Arduino Connection	        | Notes HC-05 Pin |
 |------------------|--------------------------------|-----------------|
 |VCC	           |     5V	                    |    Power supply from VCC Arduino|
-
 |GND	           |     GND	             |           Common ground	GND|
-
 |TX	          |      Pin 10 (Arduino RX)	|        SoftwareSerial RX (direct TX connection)|
-
 |RX	             |   Pin 11 (Arduino TX)	|        SoftwareSerial TX (direct connection , no resistor for RX hobby use)|
-
 |HC-05 Pin	   |     Arduino Connection	   |     Notes HC-05 Pin|
-
 |VCC	        |        5V	                |        Power supply from VCC Arduino|
 
 - Connection 2 Table
