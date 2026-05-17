@@ -441,20 +441,22 @@ void loop() {
 
 Thermistor Connection (Voltage Divider)
 
-Component	                    Connection
-Thermistor one leg	            5V
-Thermistor other leg	        A0 + one side of 10k resistor
-10k resistor other side	        GND
+|Component	         |           Connection |
+|--------------------|----------------------|
+|Thermistor one leg	 |           5V         |
+|Thermistor other leg|	        A0 + one side of 10k resistor |
+|10k resistor other side|	        GND         |
 
 👉 A0 reads voltage to calculate temperature.
 
 TM1637 Display Connection
 
-TM1637 Pin	            Arduino
-VCC	                    5V
-GND	                    GND
-DIO	                    Pin 3
-CLK	                    Pin 4
+|TM1637 Pin         |	    Arduino     |
+|-------------------|-------------------|
+|VCC                |       5V          |
+|GND                |       GND         |
+|DIO                |       Pin 3       |
+|CLK	            |       Pin 4       |
 
 Working Concept
 
